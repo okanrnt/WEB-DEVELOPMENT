@@ -56,3 +56,51 @@ let func = function(){
 
 func();
 console.log(typeof func);
+
+
+
+// ARITMETIC OPERATORS
+// +, -, *, /, %, ++, --, **
+
+let firstNumber = 3;
+let secondNumber = 7;
+let resultOfAddition = firstNumber + secondNumber;
+console.log(resultOfAddition);
+console.log(typeof resultOfAddition);
+
+
+let strValue = '3';
+let resultOfAddition2 = strValue + secondNumber;
+console.log(resultOfAddition2);
+console.log(typeof resultOfAddition2);
+
+
+let resultOfSubtraction = secondNumber - firstNumber;
+console.log(resultOfSubtraction);
+console.log(typeof resultOfSubtraction);
+
+let resultOfSubtraction2 = secondNumber - strValue;
+console.log(resultOfSubtraction2);
+console.log(typeof resultOfSubtraction2);
+
+let resultOfMultiplication = firstNumber * secondNumber;
+console.log(resultOfMultiplication);
+console.log(typeof resultOfMultiplication);
+
+let resultOfDivision = firstNumber / secondNumber;
+console.log(resultOfDivision);
+console.log(typeof resultOfDivision);
+
+let resultOfRemainder = secondNumber % firstNumber;
+console.log(resultOfRemainder);
+console.log(typeof resultOfRemainder);
+
+let thirdNumber = 8;
+thirdNumber++;
+console.log(thirdNumber);
+thirdNumber--;
+console.log(thirdNumber);
+
+let resultOfExponentiation = thirdNumber ** firstNumber;
+console.log(resultOfExponentiation);
+console.log(typeof resultOfExponentiation);
