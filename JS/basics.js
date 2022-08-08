@@ -104,3 +104,76 @@ console.log(thirdNumber);
 let resultOfExponentiation = thirdNumber ** firstNumber;
 console.log(resultOfExponentiation);
 console.log(typeof resultOfExponentiation);
+
+
+// ASSIGNMENT OPERATORS
+// =, ==, ===, +=, -=, *=, /=, %=, **=
+
+let number1 = 5;
+let number2 = 8;
+
+number1 += number2;
+console.log(number1);
+
+number1 -= number2;
+console.log(number1);
+
+number1 *= number2;
+console.log(number1);
+
+number1 /= number2;
+console.log(number1)
+
+number2 %= number1;
+console.log(number2)
+
+number1 **= number2;
+console.log(number1)
+
+
+// LOGICAL OPERATORS
+// &&, ||, !
+
+let year = 2022;
+let month = 8;
+let weatherSunny = true;
+
+console.log(year == 2022 && weatherSunny==false); // false
+console.log(year == 2022 && weatherSunny==true); // true
+
+
+console.log(year == 2022 || weatherSunny==false); // true
+console.log(year == 2022 || weatherSunny==false); // true
+console.log(year == 2023 || weatherSunny==false); // false
+
+console.log(year == 2022 && weatherSunny!=false); // true
+
+console.log(!(weatherSunny)); // false
+console.log(!(year == 2023)); // true
+
+
+// COMPARISON OPERATORS
+// ==, ===, !=, <, >, <=, >=
+
+console.log(3=='3'); // true
+console.log(3==3); // true
+console.log(3==4); // false
+
+console.log(3==='3'); // false
+console.log(3===3); // true
+
+console.log(year != 2023 || weatherSunny==false); // true
+
+console.log((year==2023 || weatherSunny) && (year!=2022 || month==8)); // true
+
+console.log(3<'4'); // true
+console.log(3<4); // true
+
+console.log(3>'4'); // false
+console.log(3>4); // false
+
+console.log(3<='3'); // true
+console.log(3<=3); // true
+
+console.log(3>='3'); // true
+console.log(3>=3); // true
