@@ -177,3 +177,22 @@ console.log(3<=3); // true
 
 console.log(3>='3'); // true
 console.log(3>=3); // true
+
+
+// DIALOG BOXES
+// alert, prompt, confirm
+
+alert('You have to save to continue the process!');
+
+let nameee = prompt('Enter your name: ');
+let yearOfBirth = prompt('Enter year of your birth: ');
+
+console.log('Name: ' + nameee);
+console.log('Year of birth: ' + yearOfBirth);
+
+console.log(typeof nameee); // string
+console.log(typeof yearOfBirth); // string
+
+
+let result1 = confirm('Are you sure you want to delete it?');
+console.log(result1); // true or false
