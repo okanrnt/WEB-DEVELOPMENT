@@ -196,3 +196,31 @@ console.log(typeof yearOfBirth); // string
 
 let result1 = confirm('Are you sure you want to delete it?');
 console.log(result1); // true or false
+
+
+
+// CONDITION STRUCTURES
+
+let note = 75; // passed note is 70
+
+if(note>=70){
+    console.log('Congratulations. Your note is ' + note +'. You have passed the exam.');
+}
+else{
+    console.log('You enter the exam again.');
+}
+
+
+// CONDITION EXERCISE
+
+let myName = "Okan";
+let agee = 32;
+let nameTaken = prompt('Enter your name: ');
+let ageTaken = Number(prompt('Enter your age: '));
+
+if ((myName == nameTaken) && (agee === ageTaken)){
+    console.log("The information is true.");
+}
+else{
+    console.log("The information is false.");
+}
