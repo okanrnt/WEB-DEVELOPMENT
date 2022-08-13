@@ -224,3 +224,20 @@ if ((myName == nameTaken) && (agee === ageTaken)){
 else{
     console.log("The information is false.");
 }
+
+
+// Calculate
+
+let note1 = Number(prompt("Enter your note of the first exam: ")); // .3
+let note2 = Number(prompt("Enter your note of the second exam: ")); // .3
+let note3 = Number(prompt("Enter your note of the last exam: "));  // .4
+
+let weightedMean = ((note1 * 30) / 100 + (note2 * 30) / 100 + (note3 * 40) / 100);
+
+// Passed note of the lesson is 70. 
+if (weightedMean >= 70){
+    alert('Congratulations! Your note is ' + weightedMean + ".");
+}
+else{
+    alert("Your note is " + weightedMean + ". You should study more the lesson.");
+}
