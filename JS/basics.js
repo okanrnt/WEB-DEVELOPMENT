@@ -1,11 +1,11 @@
-// CONSOLE
+// 1- CONSOLE
 console.log("Hello World")
 console.log("Okan Öztan")
 console.log(2.2)
 console.log(true)
 
 
-// DATA TYPES
+// 2- DATA TYPES
 let namee = "Okan";
 console.log(namee);
 console.log(typeof namee);
@@ -59,7 +59,7 @@ console.log(typeof func);
 
 
 
-// ARITMETIC OPERATORS
+// 3- ARITMETIC OPERATORS
 // +, -, *, /, %, ++, --, **
 
 let firstNumber = 3;
@@ -106,7 +106,7 @@ console.log(resultOfExponentiation);
 console.log(typeof resultOfExponentiation);
 
 
-// ASSIGNMENT OPERATORS
+// 4- ASSIGNMENT OPERATORS
 // =, ==, ===, +=, -=, *=, /=, %=, **=
 
 let number1 = 5;
@@ -131,7 +131,7 @@ number1 **= number2;
 console.log(number1)
 
 
-// LOGICAL OPERATORS
+// 5- LOGICAL OPERATORS
 // &&, ||, !
 
 let year = 2022;
@@ -152,7 +152,7 @@ console.log(!(weatherSunny)); // false
 console.log(!(year == 2023)); // true
 
 
-// COMPARISON OPERATORS
+// 6- COMPARISON OPERATORS
 // ==, ===, !=, <, >, <=, >=
 
 console.log(3=='3'); // true
@@ -179,7 +179,7 @@ console.log(3>='3'); // true
 console.log(3>=3); // true
 
 
-// DIALOG BOXES
+// 7- DIALOG BOXES
 // alert, prompt, confirm
 
 alert('You have to save to continue the process!');
@@ -199,7 +199,7 @@ console.log(result1); // true or false
 
 
 
-// CONDITION STRUCTURES
+// 8- CONDITION STRUCTURES
 
 let note = 75; // passed note is 70
 
@@ -211,7 +211,7 @@ else{
 }
 
 
-// CONDITION EXERCISE
+// 8.1- CONDITION EXERCISE
 
 let myName = "Okan";
 let agee = 32;
@@ -226,7 +226,7 @@ else{
 }
 
 
-// Calculate
+// 8.2- Calculate
 
 let note1 = Number(prompt("Enter your note of the first exam: ")); // .3
 let note2 = Number(prompt("Enter your note of the second exam: ")); // .3
@@ -240,4 +240,84 @@ if (weightedMean >= 70){
 }
 else{
     alert("Your note is " + weightedMean + ". You should study more the lesson.");
+}
+
+
+// 8.3- Choose a menu
+
+let choose = prompt("Choose a menu: \n1-Small Menu\n2-Medium Menu\n3-Big Menu");
+
+if(choose==1){
+    alert("You have choosen a small menu.");
+}
+else if(choose==='2'){
+    alert("You have choosen a medium menu.");
+}
+else if(choose==3){
+    alert("You have choosen a big menu.");
+}
+else{
+    alert('There is no such a menu.');
+}
+
+
+
+// 8.4- BODY MASS INDEX
+
+let weight = Number(prompt("Enter your weight: ")); //kilo
+let height = Number(prompt("Enter your height: ")); // metre
+
+let bodyMassIndex = weight / height**2;
+
+
+if(bodyMassIndex < 18.5){
+    alert(`Your body mass index is ${bodyMassIndex}. It is under ideal kilo.`);
+}
+
+else if(bodyMassIndex >= 18.5 && bodyMassIndex <= 24.9){
+    alert(`Your body mass index is ${bodyMassIndex}. It is ideal kilo.`);
+}
+
+else if(bodyMassIndex >= 25  && bodyMassIndex <= 39.9){
+    alert(`Your body mass index is ${bodyMassIndex}. It is over ideal kilo.`);
+}
+
+else if(40<=bodyMassIndex){
+    alert(`Your body mass index is ${bodyMassIndex}.It is well above the ideal weight.`);
+}
+
+else{
+    alert(`Enter a current value(number).`);
+}
+
+
+// 8.5- Gas Station
+
+let fuel = 22.25;   // TL
+let dizel = 24.53;  //TL
+let lpg = 11.1;    // TL
+
+
+let type = prompt("Enter type that you would like: ");
+let liter;
+if(type=="fuel"){
+    liter = parseInt(prompt("How many liters: "))
+    let price = liter * fuel;
+    alert(`Amount to pay ${price}.`);
+}
+
+else if(type == "dizel"){
+    liter = parseInt(prompt("How many liters: "))
+    let price2 = liter * dizel;
+    alert(`Amount to pay ${price2}.`);
+}
+
+else if(type=="lpg"){
+    liter = parseInt(prompt("How many liters: "))
+    let price3 = liter * lpg;
+    alert(`Amount to pay ${price3}.`);
+}
+
+else{
+    alert("Enter a current value.")
 }
