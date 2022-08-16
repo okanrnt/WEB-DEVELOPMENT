@@ -321,3 +321,104 @@ else if(type=="lpg"){
 else{
     alert("Enter a current value.")
 }
+
+
+// 9- switch Statement
+
+let number;
+let value1 = 3;
+switch(value1){
+    case 1:
+        number = 1;
+        break;
+    case 2:
+        number = 2;
+        break;
+    case 3:
+        number = 3;
+        break;
+    default:
+        console.log("Enter a current value")
+        break;
+}
+console.log(`The value of number variable is ${number}.`);
+
+
+
+// Type is important
+let value2 = 1;
+let num; 
+switch(value2){
+    case "1":
+        num = "1";
+        break;
+    case 1:
+        num = "one";
+        break;
+    case 2:
+        num = "two";
+        break;
+    default:
+        console.log("Enter a current value.");        
+}
+
+console.log(`The num is ${num}.`);
+
+
+// 9.1- Simple Calculator
+let result;
+let process = prompt("What is the process?");
+
+let fNumber = parseFloat(prompt("Enter the first number: "));
+let sNumber = parseFloat(prompt("Enter the second number: "));
+switch(process){
+    case "+":
+        result = fNumber + sNumber;
+        break;
+    case "-":
+        result = fNumber - sNumber;
+        break;
+    case "*":
+        result = fNumber * sNumber;
+        break;
+    case "/":
+        result = fNumber / sNumber;
+        break;
+    default:
+        console.log("Enter a current process");
+}
+
+console.log(`${fNumber} ${process} ${sNumber} is ${result}.`);
+
+
+
+// 9.2- DAYS
+
+const days = "1-Monday\n2-Tuesday\n3-Wednesday\n4-Thursday\n5-Friday\n"+
+    "6-Saturday\nSunday\nChoose a day: ";
+
+const dayChoose = parseInt(prompt(days));
+
+switch(dayChoose){
+    case 1:
+        console.log("The day chosen is monday.");
+        break;
+    case 2:
+        console.log("The day chosen is tuesday.");
+        break;
+    case 3:
+        console.log("The day chosen is wednesday.");
+        break;
+    case 4:
+        console.log("The day chosen is thursday.");
+        break;
+    case 5:
+        console.log("The day chosen is friday.");
+        break;
+    case 6:
+        console.log("The day chosen is saturday.");
+        break;
+    case 7:
+        console.log("The day chosen is sunday.");
+        break;
+}
