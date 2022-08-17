@@ -422,3 +422,39 @@ switch(dayChoose){
         console.log("The day chosen is sunday.");
         break;
 }
+
+
+// 10- FUNCTIONS
+
+function greet(){
+    console.log("Hello World");
+}
+greet();
+
+
+// 10.1- function paramater
+function takeName(name){
+    console.log(`The name of the user is ${name}.`);
+}
+
+takeName("Okan"); // enter an argument
+
+
+// 10.2- sum function
+function add(x,y){
+    return x + y;
+}
+
+let number1 = parseFloat(prompt("Enter the first number: "));
+let number2 = parseFloat(prompt("Enter the second number: "));
+
+let result = add(number1,number2);
+console.log("The sum is " + result);
+
+
+// 10.3- function as expression
+let a = function(anyNumber) {return anyNumber * anyNumber};
+console.log(a(5));
+
+let b = a(7);
+console.log(b);
