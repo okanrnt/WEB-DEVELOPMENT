@@ -458,3 +458,63 @@ console.log(a(5));
 
 let b = a(7);
 console.log(b);
+
+
+// 11- VARIABLE SCOPE
+
+// 11.1- Global Scope
+let x = "Hello";
+
+function greet(){
+    console.log(x);
+}
+
+greet(); // Hello
+
+
+// 11.1.1
+function greet(){
+    x = 7;
+}
+
+console.log(x);  // Hello
+
+greet();
+console.log(x); // 7
+
+
+// 11.2- Local Scope
+let x = "Hello";
+
+function greet() {
+    let y = "World";
+    console.log(x+y);
+}
+
+greet(); // HelloWorld
+console.log(x+y); // error
+
+
+// 11.3- let is Block Scope
+// global variable
+let x = "hello";
+
+function greet() {
+
+    // local variable
+    let y = "World";
+    console.log(x + ' ' + y);
+
+    if (y == "World") {
+
+        // block-scoped variable
+        let z = "hello";
+
+        console.log(x + ' ' + y + ' ' + z);
+    }
+
+    // variable z cannot be accessed here
+    console.log(x + ' ' + y + ' ' + z);
+}
+
+greet();
