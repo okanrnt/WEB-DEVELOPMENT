@@ -518,3 +518,33 @@ function greet() {
 }
 
 greet();
+
+
+// 12- JAVASCRIPT OBJECTS
+
+// 12.1- JavaScript Object Declaration
+const car = {
+    brand : "ford",
+    color : "white",
+}
+
+// 12.2- Accessing Object Properties
+const car2 = {brand: "BMW", color: "blue"}
+
+console.log(car.brand);
+console.log(car2["color"]);
+
+// 12.3- JavaScript Nested Objects
+const car3 = {
+    brand : "Ford",
+    color : "black",
+    model : 2020,
+    other : {
+        accident : false,
+        price : "30$"
+    }
+}
+
+console.log(car3.model);
+console.log(car3.other.accident);
+console.log(car3.other.price);
