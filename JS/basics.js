@@ -548,3 +548,43 @@ const car3 = {
 console.log(car3.model);
 console.log(car3.other.accident);
 console.log(car3.other.price);
+
+
+// 13- JavaScript Methods and this Keyword
+let person = {
+    name : 'Okan',
+    greet : function() { console.log("Hello everybody"); }
+};
+console.log(person.name);
+person.greet()
+
+// 13.1- Adding a Method to a JavaScript Object
+let person = {};
+person.name = 'Hüma';
+
+person.greet = function() {
+    console.log("Hello");
+};
+person.greet();
+
+
+// 13.2- this Keyword
+let person ={
+    name : 'Okan',
+    age : 32,
+    
+    introduce : function() {console.log(`My name is ${this.name}.`); }
+};
+person.introduce()
+
+// 13.2.1
+let person = {
+    name : "Okan",
+    age : 32,
+    
+    greet : function() {
+        let surname = Oztan;
+        console.log(`My name is ${this.name} and I am ${surname}`)
+    }
+};
+person.greet();
