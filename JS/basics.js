@@ -588,3 +588,100 @@ let person = {
     }
 };
 person.greet();
+
+
+
+// 14- CONSTRUCTOR FUNCTION
+
+function Vehicle() {
+    this.brand = "TOGG",
+    this.released = 2023
+}
+
+const vehicle = new Vehicle();
+console.log(vehicle.brand);
+
+
+// 14.1- Create Multiple Objects with Constructor Function
+function Vehicle() {
+    this.name = 'TOGG',
+    this.color = 'red'
+}
+
+const vehicle1 = new Vehicle();
+const vehicle2 = new Vehicle();
+console.log(vehicle1.name);
+console.log(vehicle2.name);
+
+
+// 14.2- Constructor Function Parameters
+
+function Vehicle(brand,color,price) {
+    this.brand = brand,
+    this.color = color,
+    this.price = price
+}
+
+const vehicle1 = new Vehicle('TOGG','red','40$');
+const vehicle2 = new Vehicle('Ford','blue','40$');
+
+console.log(vehicle1.brand);
+console.log(vehicle2.brand);
+
+
+// 14.3- Object Literal
+
+let person = {
+    name : 'Okan',
+    age : 24
+}
+
+let student = person;
+student.age = 27;
+
+console.log(person.age); // 27
+
+
+// 14.4- Adding Properties And Methods in an Object
+
+function Person() {
+    this.name = "Okan",
+    this.age = 25
+}
+
+let person1 = new Person();
+let person2 = new Person();
+
+person1.gender = "male";
+person1.greet = function greet() {
+    console.log("Hello everybody");
+}
+
+person1.greet();
+person2.greet(); // error
+
+
+// 14.5- Object Prototype
+
+function Person() {
+    this.name = "Okan",
+    this.age = 22
+}
+
+let person1 = new Person();
+let person2 = new Person();
+
+Person.prototype.gender = "male";
+
+console.log(person1.gender);
+console.log(person2.gender);
+
+// 14.6- Built-in Constructors
+
+let x = new String('Okan');
+let y = new Number(54);
+let z = new Boolean(true);
+
+console.log(x);
+console.log(y);
+console.log(z);
