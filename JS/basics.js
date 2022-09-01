@@ -602,7 +602,7 @@ const vehicle = new Vehicle();
 console.log(vehicle.brand);
 
 
-// 14.1- Create Multiple Objects with Constructor Function
+// 14.1- Write Multiple Objects with Constructor Function
 function Vehicle() {
     this.name = 'TOGG',
     this.color = 'red'
@@ -615,7 +615,6 @@ console.log(vehicle2.name);
 
 
 // 14.2- Constructor Function Parameters
-
 function Vehicle(brand,color,price) {
     this.brand = brand,
     this.color = color,
@@ -630,7 +629,6 @@ console.log(vehicle2.brand);
 
 
 // 14.3- Object Literal
-
 let person = {
     name : 'Okan',
     age : 24
@@ -643,7 +641,6 @@ console.log(person.age); // 27
 
 
 // 14.4- Adding Properties And Methods in an Object
-
 function Person() {
     this.name = "Okan",
     this.age = 25
@@ -662,7 +659,6 @@ person2.greet(); // error
 
 
 // 14.5- Object Prototype
-
 function Person() {
     this.name = "Okan",
     this.age = 22
@@ -677,7 +673,6 @@ console.log(person1.gender);
 console.log(person2.gender);
 
 // 14.6- Built-in Constructors
-
 let x = new String('Okan');
 let y = new Number(54);
 let z = new Boolean(true);
@@ -685,3 +680,56 @@ let z = new Boolean(true);
 console.log(x);
 console.log(y);
 console.log(z);
+
+
+// 15 - GETTER and SETTER
+
+//15.1-Getter
+const person = {
+    firstName : 'Okan',
+
+    get getName() {
+        return this.firstName;
+    }
+};
+
+console.log(person.firstName);  // Okan
+console.log(person.getName);  // Okan
+console.log(person.getName());  // error
+
+//15.2-Setter
+const person = {
+    firstName: "Okan",
+
+    set changeName(newName) {
+        this.firstName = newName;
+    }
+};
+
+console.log(person.firstName); // Okan
+person.changeName = "Furkan";
+
+console.log(person.firstName); // Furkan
+
+
+//15.3-Object.defineProperty(obj, prop, descriptor)
+const person = {
+    firstName : "Furkan",
+};
+
+Object.defineProperty(person,"getName", {
+    get : function() {
+        return this.firstName;
+    }
+});
+
+Object.defineProperty(person, "changeName", {
+    set : function(newName) {
+        this.firstName = newName;
+    }
+});
+
+console.log(person.getName); // Furkan
+person.changeName = "Okan";
+
+console.log(person.getName); // Okan
