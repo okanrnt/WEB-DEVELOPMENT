@@ -733,3 +733,65 @@ console.log(person.getName); // Furkan
 person.changeName = "Okan";
 
 console.log(person.getName); // Okan
+
+
+// 16- JAVASCRIPT PROTOTYPE
+
+// 16.1-Prototype Inheritance
+function Person() {
+    this.name = "Okan"
+};
+
+const person1 = new Person();
+const person2 = new Person();
+Person.prototype.gender = "male";
+
+console.log(Person.prototype)
+console.log(person1.gender); // male
+console.log(person2.gender); // male
+
+
+// 16.2- Add Methods to a Constructor Function Using Prototype
+function Person() {
+    this.name = "Okan",
+    this.age = 24
+}
+
+const person1 = new Person();
+const person2 = new Person();
+
+Person.prototype.greet = function() {
+    console.log("Hello" + " " + this.name);
+}
+
+person1.greet();
+person2.greet();
+
+
+// 16.3- Changing Prototype
+function Person() {
+    this.name =  "Okan"
+}
+
+Person.prototype.age = 25;
+const person1 = new Person();
+
+Person.prototype = {age : 50}
+const person4 = new Person();
+
+console.log(person4.age); // 50
+console.log(person1.age); // 25
+
+
+// 16.4- Prototype Chaining
+function Person() {
+    this.name = "Okan"
+}
+
+Person.prototype.name = "Furkan";
+Person.prototype.age = 20
+
+const person = new Person();
+
+console.log(person.name); // Okan
+console.log(person.age); // 20
