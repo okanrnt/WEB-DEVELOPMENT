@@ -795,3 +795,92 @@ const person = new Person();
 
 console.log(person.name); // Okan
 console.log(person.age); // 20
+
+
+// 17- ARRAYS
+
+// 17.1- Write an Array
+const words = ["Okan","Furkan","Hüma"];
+const array1 = ["read","sleep"];
+const array2 = new Array("read","sleep");
+
+const emptyArray = [];
+const numberArray = [1,2,3,4,5,6,7];
+const stringArray = ["read","sleep"];
+const newData1 = ["work","exercise",3,true];
+const newData2 = [
+    {"exercise1":"read"},
+    [1,6,9],
+    function greet() {console.log("hello")} 
+];
+
+// 17.2- Access Elements of an Array
+const myArray = ['w','o','r','k'];
+
+// first element
+console.log(myArray[0]); // w
+
+// second element
+console.log(myArray[1]); // o
+
+
+// 17.3- Add an Element to an Array
+let dailyRoutine = ['read','eat','pray','sleep','walk'];
+dailyRoutine.push('work'); // end
+console.log(dailyRoutine);
+
+dailyRoutine.unshift('exercise'); // begin
+console.log(dailyRoutine);
+
+// 17.4- Change the Elements of an Array
+let dailyRoutine = ['read','eat','pray','sleep','walk'];
+dailyRoutine[4] = 'exercise';
+console.log(dailyRoutine); // ['read','eat','pray','sleep','exercise']
+
+dailyRoutine[6] = 'study';
+console.log(dailyRoutine); //['read', 'eat', 'pray', 'sleep', 'exercise', empty, 'study']
+
+
+// 17.5- Remove an Element from an Array
+let dailyRoutine = ['read','eat','pray','sleep','walk'];
+dailyRoutine.pop(); // ['read','eat','pray','sleep']
+const removedElement = dailyRoutine.pop();
+console.log(removedElement); // sleep
+console.log(dailyRoutine); // ['read','eat','pray']
+
+dailyRoutine.shift(); // begin
+console.log(dailyRoutine); // ['eat','pray']
+
+
+// 17.6- Array Length
+const dailyActivities = [ 'eat', 'sleep'];
+console.log(dailyActivities.length); // 2
+
+// 17.7- Some Array Methods
+let dailyActivities = ['sleep', 'work', 'exercise']
+let newRoutine = ['eat'];
+
+// sorting elements in the alphabetical order
+dailyActivities.sort();
+console.log(dailyActivities); // ['exercise', 'sleep', 'work']
+
+//finding the index position of string
+const position = dailyActivities.indexOf('work');
+console.log(position); // 2
+
+// slicing the array elements
+const newDailyActivities = dailyActivities.slice(1);
+console.log(newDailyActivities); // [ 'sleep', 'work']
+
+// concatenating two arrays
+const routine = dailyActivities.concat(newRoutine);
+console.log(routine); // ["exercise", "sleep", "work", "eat"]
+
+
+// 17.8- Working of JavaScript Arrays
+let arr = ['h', 'e'];
+let arr1 = arr;
+arr1.push('l');
+
+console.log(arr); // ["h", "e", "l"]
+console.log(arr1); // ["h", "e", "l"]
