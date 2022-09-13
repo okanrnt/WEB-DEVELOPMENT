@@ -884,3 +884,180 @@ arr1.push('l');
 
 console.log(arr); // ["h", "e", "l"]
 console.log(arr1); // ["h", "e", "l"]
+
+
+// 18- JAVASCRIPT MULTIDIMENSIONAL ARRAY
+
+// 18.1- Write a Multidimensional Array
+const data = [[1,2,3],[4,5,6],[7,8,9]]
+
+let studentsData = [['Okan',45],['Furkan',56],['Hüma',23]];
+
+let student1 = ['Okan', 20];
+let student2 = ['Furkan',21];
+let student3 = ['Hüma',22];
+
+let studentsData = [student1,student2,student3];
+
+
+// 18.2- Access Elements of an Array
+let x = [
+    ['Okan',20],
+    ['Furkan',21],
+    ['Hüma',22]
+];
+
+console.log(x[0]); // ['Okan',20]
+
+console.log(x[0][0]); // Okan
+
+console.log(x[2][1]); // 22
+
+
+// 18.3- Add an Element to a Multidimensional Array
+
+// 18.3.1- Adding Element to the Outer Array
+let studentsData = [['Furkan',56],['Hüma',23]];
+
+studentsData.push(['Okan',20]);
+
+console.log(studentsData);
+
+// 18.3.2- Adding Element to the Inner Array
+let studentsData = [['Furkan',56],['Hüma',23]];
+studentsData[1][2] = 'hello';
+console.log(studentsData); // [['Furkan',56],['Hüma',23,"hello"]]
+
+// pushing
+let studentsData = [['Furkan',56],['Hüma',23]];
+studentsData[1].push('hello');
+console.log(studentsData); // [['Furkan',56],['Hüma',23,"hello"]]
+
+// use splice
+let studentsData = [['Jack', 24], ['Sara', 23],];
+// adding element at 1 index
+studentsData.splice(1, 0, ['Peter', 24]);
+console.log(studentsData); // [["Jack", 24], ["Peter", 24], ["Sara", 23]]
+
+
+// 18.4- Remove an Element from a Multidimensional Array
+let studentsData = [['Furkan',56],['Hüma',23]];
+studentsData.pop()
+console.log(studentsData); // [['Furkan',56]]
+
+// 18.4.1- remove the element from the inner array
+let studentsData = [['Furkan',56],['Hüma',23]];
+studentsData[1].pop();
+console.log(studentsData); // [["Furkan", 56], ["Hüma"]]
+
+// using splice
+let studentsData = [['Furkan',56],['Hüma',23]];
+// removing 1 index array item
+studentsData.splice(1,1);
+console.log(studentsData); // [['Furkan',56]]
+
+
+
+// 19- JAVASCRIPT STRINGS
+
+const name1 = 'Okan';
+const name2 = "Okan";
+const name3 = `Okan`;
+
+const name = 'My name is "Okan".';
+const namee = 'My name is 'Okan'.'; // error
+
+
+
+// 19.1- Access String Characters
+const a = 'hello';
+console.log(a[4]); // "o"
+
+const b = 'hello';
+console.log(b.charAt(4)); // "o"
+
+
+// 19.2- JavaScript Strings are immutable
+let a = 'hello';
+a[0] = 'H';
+console.log(a); // "hello"
+
+let b = 'hello';
+b = 'Hello'
+console.log(b); // "Hello"
+
+
+// 19.3- JavaScript is Case-Sensitive
+const x = 'd';
+const y = 'D';
+console.log(a === b); // false
+
+
+// 19.4- JavaScript Multiline Strings
+// using the + operator
+const message1 = 'This is a long message ' +
+    'that spans across multiple lines' + 
+    'in the code.'
+
+// using the \ operator
+const message2 = 'This is a long message \
+that spans across multiple lines \
+in the code.'
+
+
+// 19.5- JavaScript String Length
+const a = "Hüma";
+console.log(a.length); // 4
+
+
+// 19.6- JavaScript String Objects
+const a = 'hello';
+const b = new String('hello');
+
+console.log(a); // "hello"
+console.log(b); // "hello"
+
+console.log(typeof a); // "string"
+console.log(typeof b); // "object"
+
+
+// 19.7- JavaScript String Methods
+const text1 = 'hello';
+const text2 = 'world';
+const text3 = '     JavaScript    ';
+
+// concatenating two strings
+const result1 = text1.concat(' ', text2);
+console.log(result1); // "hello world"
+
+// converting the text to uppercase
+const result2 = text1.toUpperCase();
+console.log(result2); // HELLO
+
+// removing whitespace from the string
+const result3 = text3.trim();
+console.log(result3); // JavaScript
+
+// converting the string to an array
+const result4 = text1.split();
+console.log(result4); // ["hello"]
+
+// slicing the string
+const result5= text1.slice(1, 3);
+console.log(result5); // "el"
+
+
+// 19.8- JavaScript String() Function
+const x = 438; // number
+const y = true; // boolean
+
+//converting to string
+const result1 = String(x);
+const result2 = String(y);
+
+console.log(result1); // "438"
+console.log(result2); // "true"
+
+// 19.9- Escape Character
+const name4 = 'My name is \'Okan\'.';
+console.log(name4); // My name is 'Okan'.
