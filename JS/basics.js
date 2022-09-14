@@ -1061,3 +1061,54 @@ console.log(result2); // "true"
 // 19.9- Escape Character
 const name4 = 'My name is \'Okan\'.';
 console.log(name4); // My name is 'Okan'.
+
+
+
+
+// 20- JavaScript for...in loop
+
+// Example - 1
+for (key in object) {
+    // body of for...in
+}
+
+const student = {
+    name : "Okan",
+    class : 12,
+    age : 17
+}
+
+for (let key in student) {
+    console.log(`${key} => ${student[key]}`);
+}
+
+
+// Example - 2
+const salaries = {
+    Hüma : 24000,
+    Okan : 34000,
+    Furkan : 55000
+}
+
+for (let i in salaries) {
+    let salary = "$" + salaries[i];
+
+    console.log(`${i} : ${salary}`);
+}
+
+
+// 20.1- for...in with Strings
+const string = 'coding';
+
+for (let i in string) {
+    console.log(i) // 0,1,2,3,4,5
+    console.log(string[i]); // c,o,d,i,n,g
+}
+
+// 20.2- for...in with Arrays
+const arr = ['code',3,'JavaScript'];
+
+for (let x in arr) {
+    console.log(x); // 0,1,2
+    console.log(arr[x]); // code,3,JavaScript
+}
