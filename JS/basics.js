@@ -1112,3 +1112,139 @@ for (let x in arr) {
     console.log(x); // 0,1,2
     console.log(arr[x]); // code,3,JavaScript
 }
+
+
+
+// 21- JAVASCRIPT NUMBER
+
+const a = 3;
+const b = 4.15;
+
+console.log(typeof a); // number
+console.log(typeof b); // number
+
+const a1 = 5e8;
+console.log(typeof a1); // number
+console.log(a1); // 500000000
+
+const b1 = 5e-5;
+console.log(typeof b1); // number
+console.log(b1); // 0.00005
+
+const a = 0xff;
+console.log(typeof a); // number
+console.log(a); // 255
+
+const b = 0x00;
+console.log(typeof b); // number
+console.log(b); // 0
+
+
+// 21.1- + Operator with Numbers
+const a = 5 + 8;
+console.log(a) // 13
+
+const a1 = '5' + 8;
+console.log(a1) // 58
+
+const a2 = '5' - 2;
+console.log(a2) // 3
+
+const a3 = '5' * 2;
+console.log(a3) // 10
+
+const a4 = '5' / 2;
+console.log(a4) // 2.5
+
+
+// 21.2- JavaScript NaN
+const a = 4 - 'hello';
+console.log(a); // NaN
+
+const a1 = isNaN(9);
+console.log(a1); // false
+
+const a2 = isNaN(4 - 'hello');
+console.log(a2); // true
+
+const a3 = 4 - 'hello';
+console.log(a3); // NaN
+console.log(typeof a3); // "number"
+
+
+// 21.3- JavaScript Infinity
+const a = 3 / 0;
+console.log(a); // Infinity
+
+const a1 = -3 / 0;
+console.log(a); // -Infinity
+
+
+// 21.4- JavaScript BigInt
+// BigInt value
+const value = 900719925124740998n;
+
+// Adding two big integers
+const value1 = value + 1n;
+console.log(value1); // returns "900719925124740999n"
+
+
+// 21.5- Precision Problems
+// decimal numbers can't be represented in binary form exactly
+const a = 0.1 + 0.2;
+console.log(a); // 0.30000000000000004
+
+// solution
+const a = (0.1 * 10 + 0.2 * 10) / 10;
+console.log(a); // 0.3
+
+// solution 2 
+const a = 0.1 + 0.2;
+console.log(a.toFixed(2)); // 0.30
+
+
+// Integers are accurate up to 15 digits
+const a = 9999999999999999
+console.log(a); // 10000000000000000
+
+
+// 21.6- Number Objects
+const x = 32;
+const y = new Number(32);
+
+console.log(x); // 32
+console.log(y); // 32
+
+console.log(typeof x); // Number
+console.log(typeof y); // object
+
+
+// 21.7- JavaScript Some Number Methods
+const a = 12;
+console.log(Number.isInteger(a)); // true
+
+const b = NaN;
+console.log(Number.isNaN(b)); // true
+
+const d = 5.1234;
+console.log(d.toFixed(2)); // 5.12
+
+// 21.8- JavaScript Some Number Properties
+// largest possible value
+const a = Number.MAX_VALUE;
+console.log(a); // 1.7976931348623157e+308
+
+// maximum safe integer
+const a = Number.MAX_SAFE_INTEGER;
+console.log(a); // 9007199254740991
+
+// 21.8- JavaScript Number() Function
+const a = '42'; // string
+const b = true; // boolean
+
+//converting to number
+const result1 = Number(a);
+const result2 = Number(b);
+
+console.log(result1); // 23
+console.log(result2); // 1
